@@ -1,9 +1,7 @@
-"use client";
-
 import { useState } from "react";
-import { ChevronDown, ChevronRight, Sparkle, User } from "lucide-react";
+import { ChevronDown, ChevronRight, Sparkle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-// import Stack from "@/components/ui/stack";
+import { IoLogoAppleAppstore } from "react-icons/io5";
 import { bookmarkResults, bookmarks, historyData } from "@/pages/api/data";
 import Stack from "@/components/ui/stack";
 
@@ -234,9 +232,9 @@ export function ResultsView() {
           </section>
 
           {/* Section 4 - Bottom Right - Data Sources (Scrollable) */}
-          <section className="flex flex-col p-6">
+          <section className="flex flex-col p-6 max-h-96">
             <div className="flex items-center justify-between mb-4 ">
-              <h2 className="text-lg font-semibold">Data Sources</h2>
+              <h2 className="text-2xl font-semibold">Data Sources</h2>
               <div className="flex items-center gap-3">
                 <span className="text-sm text-muted-foreground">
                   Data Source
@@ -257,19 +255,17 @@ export function ResultsView() {
                   >
                     <div className="mb-2 flex items-start justify-between gap-4">
                       <div className="flex items-center gap-2">
-                        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-muted">
-                          <User className="h-3.5 w-3.5 text-muted-foreground" />
-                        </div>
                         <span className="text-sm font-medium text-foreground">
                           {source.name}
                         </span>
                       </div>
                       <span className="flex items-center gap-1 text-xs text-muted-foreground">
                         {source.date}
-                        <User className="h-3 w-3" />
+                        {/* <User className="h-3 w-3" /> */}
+                        <IoLogoAppleAppstore size={20} />
                       </span>
                     </div>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-[16px] leading-relaxed font-normal text-[#141232]/80">
                       {source.description}
                     </p>
                   </div>
