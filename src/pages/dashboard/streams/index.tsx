@@ -1,5 +1,6 @@
 import { AskStreamInput } from "@/components/dashboard/streams/ask-stream-input";
 import { PageHeader } from "@/components/dashboard/streams/page-header";
+import { ResultsView } from "@/components/dashboard/streams/results-view";
 import Layout from "@/components/layouts";
 
 export default function Streams() {
@@ -7,6 +8,7 @@ export default function Streams() {
     <Layout>
       <PageHeader />
       <AskStreamInput />
+      <ResultsView />
     </Layout>
   );
 }
