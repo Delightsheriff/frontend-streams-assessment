@@ -32,7 +32,7 @@ export function ResultsView() {
     return (
       <div
         key={index}
-        className={`flex flex-col gap-6 h-full w-full  rounded-2xl border border-border ${
+        className={`h-full w-full  rounded-2xl border border-border ${
           backgrounds[index % backgrounds.length]
         } p-6`}
       >

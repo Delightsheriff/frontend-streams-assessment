@@ -1,19 +1,40 @@
+"use client";
+
+import type React from "react";
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Sparkle } from "lucide-react";
 
-export function AskStreamInput() {
-  const [inputValue, setInputValue] = useState("");
+interface AskStreamInputProps {
+  onAnalyze?: (query: string) => void;
+}
 
-  const suggestions = [
+export function AskStreamInput({ onAnalyze }: AskStreamInputProps) {
+  const [inputValue, setInputValue] = useState<string>("");
+
+  const suggestions: string[] = [
     "Excepteur sint occaecat cupidatat?",
     "Excepteur sint occaecat cupidatat?",
   ];
 
   const handleAnalyze = () => {
-    console.log(inputValue);
-    setInputValue("");
+    if (inputValue.trim()) {
+      console.log(inputValue);
+      onAnalyze?.(inputValue);
+      setInputValue("");
+    }
+  };
+
+  const handleSuggestionClick = (suggestion: string) => {
+    setInputValue(suggestion);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && inputValue.trim()) {
+      handleAnalyze();
+    }
   };
 
   return (
@@ -24,14 +45,14 @@ export function AskStreamInput() {
         }`}
       >
         <h1
-          className="text-4xl font-semibold md:text-5xl lg:text-6xl bg-linear-to-r from-[#625AFA] to-[#272464] bg-clip-text text-transparent"
+          className="bg-linear-to-r from-[#625AFA] to-[#272464] bg-clip-text text-4xl font-semibold text-transparent md:text-5xl lg:text-6xl"
           style={{ fontFamily: "var(--font-brico)" }}
         >
           Ask Stream
         </h1>
         <h2
           style={{ fontFamily: "var(--font-brico)" }}
-          className="mt-2 text-4xl font-semibold  md:text-5xl lg:text-6xl  text-[#CAC4D0] "
+          className="mt-2 text-4xl font-semibold text-[#CAC4D0] md:text-5xl lg:text-6xl"
         >
           lorem ipsum
         </h2>
@@ -45,14 +66,15 @@ export function AskStreamInput() {
               placeholder="Ask anything"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
+              onKeyDown={handleKeyDown}
               className="w-full border-0 bg-transparent text-base text-foreground placeholder:text-muted-foreground focus:outline-none md:text-lg"
             />
-            <div className="flex items-center gap-2 mt-5">
+            <div className="mt-5 flex items-center gap-2">
               <Badge
                 variant="secondary"
                 className="flex items-center gap-1 bg-[#EFEFFF] px-2 py-0.5 text-xs font-medium text-[#625AFA]"
               >
-                <Sparkle className="h-0.5 w-0.5" fill="#625AFA" />
+                <Sparkle className="h-3 w-3" fill="#625AFA" />
                 Beta
               </Badge>
               <span className="text-xs text-[#CAC4D0] md:text-sm">
@@ -64,7 +86,7 @@ export function AskStreamInput() {
             onClick={handleAnalyze}
             disabled={!inputValue.trim()}
             size="default"
-            className="shrink-0 bg-[#141232] hover:bg-[#1f1b4a] hover:text-white text-white  disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer font-medium text-sm rounded-sm"
+            className="shrink-0 cursor-pointer rounded-sm bg-[#141232] text-sm font-medium text-white hover:bg-[#1f1b4a] hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
           >
             Analyze
           </Button>
@@ -75,7 +97,7 @@ export function AskStreamInput() {
         {suggestions.map((suggestion, index) => (
           <button
             key={index}
-            onClick={() => setInputValue(suggestion)}
+            onClick={() => handleSuggestionClick(suggestion)}
             className="group flex items-center justify-between gap-3 rounded-lg border border-border bg-background px-4 py-3 text-left text-sm text-foreground shadow-sm transition-all hover:border-muted-foreground/40 hover:bg-muted/50 hover:shadow-md md:px-5 md:py-4 md:text-base"
           >
             <span className="text-[#141232]/60">{suggestion}</span>
