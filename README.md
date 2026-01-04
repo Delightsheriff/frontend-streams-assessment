@@ -1,40 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# AI Chatbot Dashboard - Frontend Assessment
 
-## Getting Started
+This project is a high-fidelity implementation of an AI chatbot dashboard built with **Next.js**, as part of the Peppermint Frontend Assessment. The primary goal was to create a functional, responsive dashboard that adheres to the provided Figma designs, specifically focusing on the demographic reports and horizontal card interactions.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Vercel Deployment:** [https://frontend-streams-assessment.vercel.app/](https://frontend-streams-assessment.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Framework:** Next.js
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Data Handling:** Static JSON
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Approach & Implementation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+1. **Horizontal Card Interaction**: Implemented the specific interaction logic for the section 2 cards as defined in the interactive prototype.
+2. **Responsive UI**: Implemented a mobile-first sidebar using a Drawer/Sheet pattern for mobile views and a fixed sidebar for desktop.
+3. **HTML Standards**: Resolved hydration mismatches by ensuring valid HTML nesting (replacing nested buttons with accessible `div` elements) to comply with SSR best practices.
+4. **Stable Rendering**: Refactored component logic to avoid "component created during render" errors, ensuring a stable React state during user interaction.
+5. **Prioritization**: Focused on the Demographic section first, including test metrics and the interactive location distribution map, as required by the brief.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Assumptions Made
 
-## Learn More
+- **Scope**: Per the instructions, the navigation bar and filter buttons were ignored to focus on the core dashboard metrics and card interactions.
+- **Data**: The dashboard is populated entirely using static JSON data to simulate the report environment and data will be fetched when apis are ready.
 
-To learn more about Next.js, take a look at the following resources:
+## Instructions for Running Locally
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+1. **Clone the repository:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/Delightsheriff/frontend-streams-assessment
+   cd frontend-streams-assessment
+   ```
 
-## Deploy on Vercel
+2. **Install dependencies:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open the application:** Navigate to http://localhost:3000 in your browser.
+
+## Submission Requirements
+
+- [x] Horizontal cards interaction functional
+- [x] Mobile and Desktop responsive design
+- [x] Dashboard demographic section implemented
+- [x] Deployed to Vercel
