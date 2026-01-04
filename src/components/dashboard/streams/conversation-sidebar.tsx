@@ -70,8 +70,12 @@ export function ConversationSidebar({
     setExpandedSections((prev) => ({ ...prev, [section]: !prev[section] }));
   };
 
+  /**
+   * Renders an individual conversation item.
+   * Changed from <button> to <div> to avoid "Hydration Mismatch" caused by nested buttons.
+   */
   const renderConversationItem = (conversation: Conversation) => (
-    <button
+    <div
       key={conversation.id}
       onClick={() => {
         onSelectConversation(conversation);
@@ -79,7 +83,16 @@ export function ConversationSidebar({
       }}
       onMouseEnter={() => setHoveredId(conversation.id)}
       onMouseLeave={() => setHoveredId(null)}
-      className={`w-full font-normal text-[#4F566B] rounded-md px-3 py-2 text-left text-sm transition-colors hover:bg-[#EFEFFF] flex items-center justify-between gap-2 group ${
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onSelectConversation(conversation);
+          setMobileOpen(false);
+        }
+      }}
+      className={`w-full cursor-pointer font-normal text-[#4F566B] rounded-md px-3 py-2 text-left text-sm transition-colors hover:bg-[#EFEFFF] flex items-center justify-between gap-2 group ${
         selectedConversation?.id === conversation.id ? "bg-[#EFEFFF]" : ""
       }`}
     >
@@ -113,9 +126,12 @@ export function ConversationSidebar({
           </button>
         </div>
       )}
-    </button>
+    </div>
   );
 
+  /**
+   * Sidebar content stored as a variable to prevent the "component created during render" error.
+   */
   const sidebarContent = (
     <div className="flex h-full flex-col p-4">
       <div className="flex-1 overflow-y-auto">
