@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 
 export function PageHeader() {
   return (
-    <header className="flex items-center justify-between border-b border-border bg-background px-4 py-3 md:px-6">
+    <header className="sticky top-0 z-10 flex items-center justify-between border-b border-border bg-background px-4 py-3 md:px-6">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
