@@ -136,7 +136,7 @@ export default function Stack({
             disableDrag={dragDisabled}
           >
             <motion.div
-              className="w-full h-full rounded-2xl flex items-center justify-center text-center"
+              className="w-full h-full rounded-2xl "
               onClick={() =>
                 (sendToBackOnClick || dragDisabled) &&
                 isTop &&
@@ -154,9 +154,7 @@ export default function Stack({
                 damping: animationConfig.damping,
               }}
             >
-              <div className="w-full h-full flex flex-col items-center justify-center overflow-hidden">
-                {card.content}
-              </div>
+              <div className="w-full h-full ">{card.content}</div>
             </motion.div>
           </CardRotate>
         );

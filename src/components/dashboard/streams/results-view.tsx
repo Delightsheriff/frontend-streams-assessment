@@ -67,8 +67,8 @@ export function ResultsView() {
                   <button
                     key={bookmark.id}
                     onClick={() => setSelectedBookmark(bookmark.id)}
-                    className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors hover:bg-muted ${
-                      selectedBookmark === bookmark.id ? "bg-muted" : ""
+                    className={`w-full font-normal text-[#4F566B] rounded-md px-3 py-2 text-left text-sm transition-colors hover:bg-[#EFEFFF] ${
+                      selectedBookmark === bookmark.id ? "bg-[#EFEFFF]" : ""
                     }`}
                   >
                     {bookmark.title}
@@ -187,7 +187,7 @@ export function ResultsView() {
 
       {/* Main Content */}
       <main className="flex-1 overflow-auto p-10 text-[#141232]">
-        <div className="grid grid-cols-2 grid-rows-2 rounded-lg border border-border">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 rounded-lg border border-border">
           {/* Section 1 - Top Left */}
           <section className="space-y-4 border-r border-b border-border p-6">
             <h2 className="text-2xl font-semibold">Section 1</h2>
@@ -201,16 +201,17 @@ export function ResultsView() {
               <div className="flex items-center gap-2">
                 <Badge
                   variant="secondary"
-                  className="bg-indigo-100 text-indigo-700 hover:bg-indigo-200"
+                  className="flex items-center gap-1 bg-[#EFEFFF] px-2 py-0.5 text-xs font-medium text-[#625AFA]"
                 >
-                  Chip
+                  <Sparkle className="h-3 w-3" fill="#625AFA" />
+                  Beta
                 </Badge>
               </div>
             </div>
           </section>
 
           {/* Section 2 - Top Right */}
-          <section className="space-y-4 border-b border-border p-6 h-full w-f">
+          <section className="space-y-4 border-b border-border p-6 h-full w-full">
             <Stack
               cards={stackCards}
               randomRotation={true}

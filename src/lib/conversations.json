@@ -1,0 +1,204 @@
+{
+  "conversations": [
+    {
+      "id": "1",
+      "title": "Why is sentiment dropping this month?",
+      "timestamp": "November 25, 2025",
+      "isBookmarked": true,
+      "data": {
+        "section1": {
+          "title": "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        "section2Cards": [
+          {
+            "title": "Customer Sentiment Analysis",
+            "subheading": "Understanding negative trends",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+          },
+          {
+            "title": "Feedback Trends",
+            "subheading": "Recent user complaints",
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+          },
+          {
+            "title": "Product Issues",
+            "subheading": "Key problem areas",
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur."
+          },
+          {
+            "title": "Resolution Strategy",
+            "subheading": "Action items",
+            "content": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum."
+          }
+        ],
+        "section3": {
+          "title": "Commodo consequat",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea."
+        },
+        "dataSources": [
+          {
+            "name": "Sawyer Merritt",
+            "date": "November 20, 2025",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."
+          },
+          {
+            "name": "Jessiebeesocial",
+            "date": "November 20, 2025",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."
+          },
+          {
+            "name": "Sawyer Merritt",
+            "date": "November 20, 2025",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "title": "What do people dislike about our product?",
+      "timestamp": "November 24, 2025",
+      "isBookmarked": true,
+      "data": {
+        "section1": {
+          "title": "Common user complaints about product features and experience",
+          "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "section2Cards": [
+          {
+            "title": "User Interface Issues",
+            "subheading": "Navigation problems",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+          },
+          {
+            "title": "Performance Complaints",
+            "subheading": "Speed and reliability",
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+          },
+          {
+            "title": "Feature Requests",
+            "subheading": "Missing functionality",
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
+          },
+          {
+            "title": "Support Issues",
+            "subheading": "Customer service gaps",
+            "content": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis."
+          }
+        ],
+        "section3": {
+          "title": "Analysis Summary",
+          "content": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti."
+        },
+        "dataSources": [
+          {
+            "name": "Alex Johnson",
+            "date": "November 19, 2025",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."
+          },
+          {
+            "name": "Maria Garcia",
+            "date": "November 19, 2025",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "title": "How to improve customer satisfaction?",
+      "timestamp": "November 23, 2025",
+      "isBookmarked": false,
+      "data": {
+        "section1": {
+          "title": "Key strategies for enhancing customer experience",
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "section2Cards": [
+          {
+            "title": "Response Time",
+            "subheading": "Faster support",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          },
+          {
+            "title": "Product Quality",
+            "subheading": "Better reliability",
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium."
+          },
+          {
+            "title": "Communication",
+            "subheading": "Clear messaging",
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit."
+          },
+          {
+            "title": "Value Addition",
+            "subheading": "Extra benefits",
+            "content": "At vero eos et accusamus et iusto odio dignissimos ducimus."
+          }
+        ],
+        "section3": {
+          "title": "Implementation Plan",
+          "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+        },
+        "dataSources": [
+          {
+            "name": "Sarah Williams",
+            "date": "November 18, 2025",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."
+          }
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "title": "Analysis of user feedback trends",
+      "timestamp": "November 20, 2025",
+      "isBookmarked": false,
+      "data": {
+        "section1": {
+          "title": "Emerging patterns in customer feedback over the past quarter",
+          "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+        "section2Cards": [
+          {
+            "title": "Positive Feedback",
+            "subheading": "What users love",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+          },
+          {
+            "title": "Negative Feedback",
+            "subheading": "Pain points",
+            "content": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem."
+          },
+          {
+            "title": "Neutral Feedback",
+            "subheading": "Suggestions",
+            "content": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur."
+          },
+          {
+            "title": "Trending Topics",
+            "subheading": "Hot issues",
+            "content": "At vero eos et accusamus et iusto odio dignissimos."
+          }
+        ],
+        "section3": {
+          "title": "Trend Analysis",
+          "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        "dataSources": [
+          {
+            "name": "Michael Chen",
+            "date": "November 17, 2025",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."
+          },
+          {
+            "name": "Emily Davis",
+            "date": "November 17, 2025",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...."
+          }
+        ]
+      }
+    }
+  ]
+}
